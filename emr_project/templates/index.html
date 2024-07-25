@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Records</title>
+</head>
+<body>
+    <h1>Patient Records</h1>
+    <ul>
+        {% for record in records %}
+        <li>{{ record.first_name }} {{ record.last_name }} - {{ record.date_of_birth }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_record') }}">Add New Record</a>
+</body>
+</html>
